@@ -1,2 +1,6 @@
-#! /bin/sh
-sh ./bin/flinkx -job './job/stream.json' -flinkconf './flinkconf/' -pluginRoot './plugins/'
+#! /bin/bash
+bin/flinkx \
+  -mode local \
+  -job job/stream.json \
+  -pluginRoot syncplugins \
+  -flinkconf flinkconf
